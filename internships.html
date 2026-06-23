@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internships - Student Career Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Navbar */
+nav{
+    background:#021638;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+}
+
+.menu a:hover{
+    color:#3b82f6;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(rgba(2,22,56,.9),
+    rgba(2,22,56,.9));
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Internship Section */
+.internships{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+}
+
+.internships h2{
+    text-align:center;
+    color:#021638;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.internship-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.internship-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.internship-card:hover{
+    transform:translateY(-10px);
+}
+
+.internship-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.internship-card p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+.apply-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.apply-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Benefits Section */
+.benefits{
+    max-width:1200px;
+    margin:60px auto;
+    padding:20px;
+}
+
+.benefits h2{
+    text-align:center;
+    color:#021638;
+    margin-bottom:40px;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.benefit-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.benefit-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+    background:#021638;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+.search-box{
+    margin-top:30px;
+}
+
+.search-box input{
+    width:380px;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.search-box button{
+    padding:14px 25px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+.categories{
+    max-width:1200px;
+    margin:70px auto;
+    text-align:center;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.category-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    font-weight:600;
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+}
+.companies{
+    max-width:1200px;
+    margin:70px auto;
+    text-align:center;
+}
+
+.company-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.company-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    font-weight:bold;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.stats{
+    max-width:1200px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+.stat-box{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.stat-box h2{
+    color:#2563eb;
+    font-size:38px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">Student Career Hub</div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="internships.html">Internships</a>
+        <a href="courses.html">Courses</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Launch Your Career with Internships</h1>
+
+    <p>
+        Discover internships from top companies, gain real-world
+        experience, and build skills that prepare you for your dream job.
+    </p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search internships, skills, companies...">
+        <button>Search</button>
+    </div>
+</section>
+
+<section class="stats">
+
+    <div class="stat-box">
+        <h2>500+</h2>
+        <p>Internships Available</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>200+</h2>
+        <p>Partner Companies</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>10K+</h2>
+        <p>Students Placed</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>95%</h2>
+        <p>Success Rate</p>
+    </div>
+
+</section>
+
+<!-- Internship Cards -->
+<section class="internships">
+
+    <h2>Featured Internships</h2>
+
+    <div class="internship-grid">
+
+        <div class="internship-card">
+            <h3>Web Development Intern</h3>
+            <p><strong>Company:</strong> TechNova Solutions</p>
+            <p><strong>Duration:</strong> 3 Months</p>
+            <p><strong>Location:</strong> Hyderabad</p>
+            <p>Work on real-world websites using HTML, CSS, JavaScript and modern web technologies.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="internship-card">
+            <h3>Data Science Intern</h3>
+            <p><strong>Company:</strong> DataSphere</p>
+            <p><strong>Duration:</strong> 6 Months</p>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p>Learn data analysis, visualization, machine learning and business insights.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="internship-card">
+            <h3>UI/UX Design Intern</h3>
+            <p><strong>Company:</strong> Creative Studio</p>
+            <p><strong>Duration:</strong> 4 Months</p>
+            <p><strong>Location:</strong> Chennai</p>
+            <p>Design user-friendly interfaces and improve user experiences for digital products.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="internship-card">
+            <h3>Digital Marketing Intern</h3>
+            <p><strong>Company:</strong> Growth Media</p>
+            <p><strong>Duration:</strong> 3 Months</p>
+            <p><strong>Location:</strong> Remote</p>
+            <p>Learn SEO, social media marketing, content strategy and campaign management.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="companies">
+
+    <h2>Top Hiring Companies</h2>
+
+    <div class="company-grid">
+
+        <div class="company-card">Google</div>
+        <div class="company-card">Microsoft</div>
+        <div class="company-card">Amazon</div>
+        <div class="company-card">Infosys</div>
+        <div class="company-card">TCS</div>
+        <div class="company-card">Wipro</div>
+
+    </div>
+
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+
+    <h2>Why Choose Our Internships?</h2>
+
+    <div class="benefit-grid">
+
+        <div class="benefit-card">
+            <h3>Hands-on Experience</h3>
+            <p>Work on real projects and gain practical industry exposure.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Skill Development</h3>
+            <p>Build technical and professional skills required by employers.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Industry Mentorship</h3>
+            <p>Learn from experienced professionals and industry experts.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Career Growth</h3>
+            <p>Improve your chances of securing full-time employment.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 Student Career Hub | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

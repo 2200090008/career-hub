@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - Student Career Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Navbar */
+nav{
+    background:#021638;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+}
+
+.menu a:hover{
+    color:#3b82f6;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(rgba(2,22,56,.9),
+    rgba(2,22,56,.9));
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Courses Section */
+.courses{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+}
+
+.courses h2{
+    text-align:center;
+    color:#021638;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.course-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.course-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.course-card p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+.enroll-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.enroll-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Benefits */
+.benefits{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+}
+
+.benefits h2{
+    text-align:center;
+    color:#021638;
+    margin-bottom:40px;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.benefit-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.benefit-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+    background:#021638;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+.categories{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+}
+
+.categories h2{
+    text-align:center;
+    color:#021638;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:.3s;
+    border-top:4px solid #2563eb;
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+}
+
+.category-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.category-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+.stats{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-box{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    border-top:4px solid #2563eb;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.stat-box h2{
+    font-size:42px;
+    color:#2563eb;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.stat-box p{
+    color:#555;
+    font-size:17px;
+    font-weight:500;
+}
+@media(max-width:768px){
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box input{
+        width:100%;
+    }
+
+    .search-box button{
+        width:100%;
+    }
+
+}
+.search-box{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.search-box input{
+    width:450px;
+    max-width:90%;
+    padding:15px 20px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.search-box button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.search-box button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">Student Career Hub</div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="internships.html">Internships</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Explore Professional Courses</h1>
+    <p>
+        Learn industry-relevant skills, earn certifications,
+        and prepare yourself for future career opportunities.
+    </p>
+    <div class="search-box">
+    <input type="text" placeholder="Search courses, skills, technologies...">
+    <button>Search</button>
+</div>
+</section>
+<section class="stats">
+
+    <div class="stat-box">
+        <h2>100+</h2>
+        <p>Courses Available</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>50+</h2>
+        <p>Expert Mentors</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>10K+</h2>
+        <p>Students Enrolled</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>95%</h2>
+        <p>Completion Rate</p>
+    </div>
+
+</section>
+<!-- Popular Learning Paths -->
+<section class="categories">
+
+    <h2>Popular Learning Paths</h2>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            <h3>💻 Web Development</h3>
+            <p>
+                Learn Frontend, Backend, and Full Stack Development
+                using modern web technologies.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <h3>📊 Data Science</h3>
+            <p>
+                Explore Data Analysis, Machine Learning,
+                Artificial Intelligence, and Visualization.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <h3>☁ Cloud Computing</h3>
+            <p>
+                Master AWS, Azure, Cloud Infrastructure,
+                and DevOps fundamentals.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <h3>🔐 Cyber Security</h3>
+            <p>
+                Learn Network Security, Ethical Hacking,
+                and Cyber Threat Protection.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Popular Courses -->
+<section class="courses">
+
+    <h2>Popular Courses</h2>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>Full Stack Web Development</h3>
+            <p>
+                Learn HTML, CSS, JavaScript, React, Node.js,
+                Express.js, and Databases.
+            </p>
+            <p><strong>Duration:</strong> 6 Months</p>
+            <p><strong>Level:</strong> Beginner to Advanced</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Python Programming</h3>
+            <p>
+                Master Python fundamentals, automation,
+                APIs, and real-world projects.
+            </p>
+            <p><strong>Duration:</strong> 3 Months</p>
+            <p><strong>Level:</strong> Beginner</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Data Science & Machine Learning</h3>
+            <p>
+                Learn Data Analysis, Machine Learning,
+                Statistics, and Data Visualization.
+            </p>
+            <p><strong>Duration:</strong> 6 Months</p>
+            <p><strong>Level:</strong> Intermediate</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>UI/UX Design</h3>
+            <p>
+                Design modern user interfaces and create
+                engaging digital experiences.
+            </p>
+            <p><strong>Duration:</strong> 4 Months</p>
+            <p><strong>Level:</strong> Beginner</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Cloud Computing</h3>
+            <p>
+                Learn AWS, Azure, Cloud Services,
+                and Infrastructure Management.
+            </p>
+            <p><strong>Duration:</strong> 5 Months</p>
+            <p><strong>Level:</strong> Intermediate</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Cyber Security</h3>
+            <p>
+                Understand Ethical Hacking, Network Security,
+                and Cyber Defense techniques.
+            </p>
+            <p><strong>Duration:</strong> 5 Months</p>
+            <p><strong>Level:</strong> Intermediate</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+
+    <h2>Why Learn With Us?</h2>
+
+    <div class="benefit-grid">
+
+        <div class="benefit-card">
+            <h3>Expert Trainers</h3>
+            <p>Learn from experienced professionals and mentors.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Hands-on Projects</h3>
+            <p>Build real-world projects to strengthen your portfolio.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Certification</h3>
+            <p>Receive course completion certificates.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Career Support</h3>
+            <p>Get guidance for interviews and job preparation.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 Student Career Hub | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

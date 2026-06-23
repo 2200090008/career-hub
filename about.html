@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Student Career Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Navbar */
+nav{
+    background:#021638;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#3b82f6;
+}
+
+/* Hero Section */
+.hero{
+    height:350px;
+    background:linear-gradient(rgba(2,22,56,0.85),
+    rgba(2,22,56,0.85)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+/* About Section */
+.about{
+    max-width:1200px;
+    margin:80px auto;
+    padding:20px;
+}
+
+.about-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-content img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.about-text h2{
+    color:#021638;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* Mission */
+.mission{
+    max-width:1000px;
+    margin:50px auto;
+    text-align:center;
+    padding:20px;
+}
+
+.mission h2{
+    color:#021638;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.mission p{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+}
+
+/* Stats */
+.stats{
+    max-width:1200px;
+    margin:70px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+.stat-box{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stat-box h2{
+    color:#2563eb;
+    font-size:40px;
+}
+
+.stat-box p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
+}
+
+/* Features */
+.features{
+    max-width:1200px;
+    margin:80px auto;
+    padding:20px;
+}
+
+.features h2{
+    text-align:center;
+    color:#021638;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* Footer */
+footer{
+    background:#021638;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:70px;
+}
+
+@media(max-width:768px){
+
+    .about-content{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">Student Career Hub</div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="#">Internships</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">  
+    <div>
+        <h1>About Student Career Hub</h1>
+
+        <p style="max-width:950px; margin:auto; line-height:1.9;">
+            At Student Career Hub, we believe every student deserves
+            access to the right opportunities and guidance to build a
+            successful future. Our platform serves as a bridge between
+            education and industry by providing students with access to
+            verified job openings, internships, skill-development
+            programs, and career resources. We are committed to helping
+            young professionals gain confidence, enhance their skills,
+            and take meaningful steps toward achieving their dream
+            careers in an ever-evolving professional world.
+        </p>
+    </div>
+</section></p>
+
+<!-- About -->
+<section class="about">
+    <div class="about-content">
+
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900"
+        alt="Students">
+
+        <div class="about-text">
+            <h2>Who We Are?</h2>
+
+            <p>
+                Student Career Hub is a dedicated platform designed to
+                support students and fresh graduates in their journey
+                toward a successful professional career. We understand
+                that finding the right opportunities can be challenging,
+                which is why we provide a single destination where
+                students can explore jobs, internships, courses, and
+                career resources.
+            </p>
+
+            <p>
+                Our platform connects aspiring professionals with
+                industry opportunities, helping them gain practical
+                experience, develop valuable skills, and stay updated
+                with current career trends. We aim to simplify the
+                process of career exploration and professional growth.
+            </p>
+
+            <p>
+                Whether you are searching for your first internship,
+                looking to enhance your skills through certification
+                courses, or preparing for your dream job, Student Career
+                Hub is committed to guiding you every step of the way.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Mission -->
+<section class="mission">
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to bridge the gap between education and industry
+        by providing students with access to quality career opportunities,
+        practical learning resources, and professional guidance. We strive
+        to create an environment where students can discover their
+        potential, develop confidence, and build a successful future.
+    </p>
+</section>
+
+<!-- Statistics -->
+<section class="stats">
+
+    <div class="stat-box">
+        <h2>500+</h2>
+        <p>Job Opportunities</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>200+</h2>
+        <p>Internships</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>100+</h2>
+        <p>Courses</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>10K+</h2>
+        <p>Students Supported</p>
+    </div>
+
+</section>
+
+<!-- Why Choose Us -->
+<section class="features">
+
+    <h2>Why Choose Student Career Hub?</h2>
+
+    <div class="feature-grid">
+
+        <div class="card">
+            <h3>Trusted Opportunities</h3>
+            <p>
+                Access verified job openings and internship programs
+                from trusted organizations and recruiters.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Skill Development</h3>
+            <p>
+                Learn through industry-relevant courses and
+                certifications that improve employability.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Career Guidance</h3>
+            <p>
+                Receive valuable insights, resources, and support
+                to make informed career decisions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Student Focused</h3>
+            <p>
+                Designed specifically for students and fresh graduates
+                who are preparing for their professional journey.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 Student Career Hub | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

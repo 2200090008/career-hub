@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Student Career Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#021638,#2563eb);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.register-container{
+    width:100%;
+    max-width:450px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.register-container h1{
+    text-align:center;
+    color:#021638;
+    margin-bottom:10px;
+}
+
+.register-container p{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#021638;
+    font-weight:600;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.input-group input:focus{
+    border-color:#2563eb;
+}
+
+.register-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.register-btn:hover{
+    background:#1d4ed8;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <h1>Create Account</h1>
+
+    <p>Join Student Career Hub and start your career journey.</p>
+
+    <form action="index.html">
+    
+    <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" required>
+    </div>
+
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" required>
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" required>
+    </div>
+
+    <button type="submit" class="register-btn">
+        Register
+    </button>
+
+</form>
+
+    <div class="login-link">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </div>
+
+</div>
+
+</body>
+</html>

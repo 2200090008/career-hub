@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Student Career Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Navbar */
+nav{
+    background:#021638;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+}
+
+.menu a:hover{
+    color:#3b82f6;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(rgba(2,22,56,.9),
+    rgba(2,22,56,.9));
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+/* Contact Section */
+.contact{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.contact-info h2{
+    color:#021638;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    color:#555;
+    line-height:1.8;
+}
+
+.contact-form{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.contact-form h2{
+    color:#021638;
+    margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.contact-form textarea{
+    height:120px;
+    resize:none;
+}
+
+.contact-form button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.contact-form button:hover{
+    background:#1d4ed8;
+}
+
+/* Footer */
+footer{
+    background:#021638;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+
+@media(max-width:768px){
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+.contact-container{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.contact-info h2,
+.contact-form h2{
+    color:#021638;
+    margin-bottom:25px;
+}
+
+.info-box{
+    margin-bottom:25px;
+}
+
+.info-box h3{
+    color:#2563eb;
+    margin-bottom:8px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#1d4ed8;
+}
+
+@media(max-width:768px){
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">Student Career Hub</div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="internships.html">Internships</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<!-- Hero -->
+<section class="hero">
+    <h1>Contact Us</h1>
+    <p>
+        Have questions, feedback, or need career guidance?
+        We're here to help you.
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-container">
+
+    <div class="contact-info">
+
+        <h2>Get In Touch</h2>
+
+        <div class="info-box">
+            <h3>📧 Email</h3>
+            <p>support@studentcareerhub.com</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📞 Phone</h3>
+            <p>+91 9876543210</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📍 Address</h3>
+            <p>Hyderabad, Telangana, India</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🕒 Working Hours</h3>
+            <p>Mon - Sat : 9:00 AM - 6:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="contact-form">
+
+        <h2>Send Message</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <input type="text" placeholder="Subject">
+
+            <textarea rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+
+</section>
+
+
+    
+
+</section>
+
+<footer>
+    <p>© 2025 Student Career Hub | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
